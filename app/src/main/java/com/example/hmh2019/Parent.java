@@ -14,11 +14,11 @@ import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
-import kid;
+import Kid;
 
 public class Parent {
-    ArrayList<kid> kidArrayList; //The initial list should be empty and we are adding kid to the arraylist when a kid complete his/her test
+    ArrayList<Kid> kidArrayList; //The initial list should be empty and we are adding kid to the arraylist when a kid complete his/her test
     public Parent(){
-        ArrayList<kid> kidArrayList = new ArrayList<kid>();
+        ArrayList<Kid> kidArrayList = new ArrayList<Kid>();
     }
 }
