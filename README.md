@@ -6,6 +6,6 @@ InsideOut4869 is an Android app for getting kid's mental health data and providi
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 Please make sure to update tests as appropriate.
 ## Authors
-Meng Chen, Alina Yu, Sunny Gou, Yihui Zhu
+Chen Meng, Alina Yu, Sunny Gou, Yihui Zhu
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
