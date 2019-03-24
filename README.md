@@ -1,6 +1,6 @@
-# HMH2019
+# InsideOut4869
 
-HMH2019 is an Android app for getting mental health data and providing feedback and future advice of kids.
+InsideOut4869 is an Android app for getting kid's mental health data and providing feedback and future advice for kids' parents.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
