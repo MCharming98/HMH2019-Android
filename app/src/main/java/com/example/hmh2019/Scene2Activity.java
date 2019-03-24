@@ -62,6 +62,7 @@ public class Scene2Activity extends AppCompatActivity {
         SharedPreferences.Editor editor = getSharedPreferences(this.childName, MODE_PRIVATE).edit();
         editor.putString("spelling", choice);
         editor.commit();
+        Log.i(this.getClass().getSimpleName(), "Stored spelling choice: " + choice);
     }
 
     private void forwardToSceneIntro(){

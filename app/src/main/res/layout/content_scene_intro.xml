@@ -39,7 +39,7 @@
         tools:ignore="MissingConstraints"
         android:scaleType="centerInside"
         android:background="@null"
-        android:visibility="visible"
+        android:visibility="invisible"
         tools:layout_editor_absoluteX="162dp"
         tools:layout_editor_absoluteY="16dp" />
 
@@ -49,6 +49,63 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="The school bus is coming and when you’re looking for a seat"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/hit_intro_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@null"
+        android:scaleType="centerInside"
+        android:src="@drawable/hit_intro"
+        android:visibility="visible"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/hit_intro_text"
+        android:layout_width="352dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:text="A bunch of your classmates are running around and one of them hits your at your back. What do you think?"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/lunch_intro_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@null"
+        android:scaleType="centerInside"
+        android:src="@drawable/lunch_intro"
+        android:visibility="invisible"
+        android:translationZ="-10dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="35dp" />
+
+    <TextView
+        android:id="@+id/lunch_intro_text"
+        android:layout_width="333dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:text="It’s lunch time but your deskmate Emma forgot to bring her lunchbox"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="24dp"

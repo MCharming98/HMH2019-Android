@@ -5,6 +5,76 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:background="@drawable/lunch_bg"
     tools:context=".Scene4Activity">
+
+    <TextView
+        android:id="@+id/text_lunch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="83dp"
+        android:layout_marginLeft="83dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="83dp"
+        android:layout_marginRight="83dp"
+        android:text="How do you feel?"
+        android:textColor="#000000"
+        android:textSize="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/lunch_choice_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginLeft="92dp"
+        android:layout_marginTop="95dp"
+        android:background="@null"
+        android:scaleType="centerInside"
+        android:src="@drawable/lunch_choice_a"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_lunch" />
+
+    <ImageButton
+        android:id="@+id/lunch_choice_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="83dp"
+        android:layout_marginEnd="102dp"
+        android:layout_marginRight="102dp"
+        android:background="@null"
+        android:scaleType="centerInside"
+        android:src="@drawable/lunch_choice_b"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lunch_choice_d" />
+
+    <ImageButton
+        android:id="@+id/lunch_choice_c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="93dp"
+        android:layout_marginLeft="93dp"
+        android:layout_marginTop="83dp"
+        android:background="@null"
+        android:scaleType="centerInside"
+        android:src="@drawable/lunch_choice_c"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lunch_choice_a" />
+
+    <ImageButton
+        android:id="@+id/lunch_choice_d"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="95dp"
+        android:layout_marginEnd="97dp"
+        android:layout_marginRight="97dp"
+        android:background="@null"
+        android:scaleType="centerInside"
+        android:src="@drawable/lunch_choice_d"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_lunch" />
 
 </android.support.constraint.ConstraintLayout>

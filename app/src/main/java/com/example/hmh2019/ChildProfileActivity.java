@@ -8,6 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -27,7 +29,12 @@ public class ChildProfileActivity extends AppCompatActivity {
         Kid kid = new Kid(childName);
         kid.doing_test_school_bus(answers.get("bus"));
         kid.doing_test_spelling_game(answers.get("spelling"));
-        //kid.doing_test_lunch(answers.get("lunch"));
+        kid.doing_test_hit(answers.get("hit"));
+        kid.doing_test_lunch(answers.get("lunch"));
+
+        String result = kid.finish();
+        TextView childReport = findViewById(R.id.report);
+        childReport.setText(result);
     }
 
 
@@ -37,10 +44,18 @@ public class ChildProfileActivity extends AppCompatActivity {
 
         String busAns = prefs.getString("bus", null);
         String spellingAns = prefs.getString("spelling", null);
-        //String lunchAns = prefs.getString("lunch", null);
+        String hitAns = prefs.getString("hit", null);
+        String lunchAns = prefs.getString("lunch", null);
+
+        Log.i(this.getClass().getSimpleName(), "Bus ans: " + busAns);
+        Log.i(this.getClass().getSimpleName(), "Spelling ans: " + spellingAns);
+        Log.i(this.getClass().getSimpleName(), "Hit ans: " + hitAns);
+        Log.i(this.getClass().getSimpleName(), "Lunch ans: " + lunchAns);
+
         answers.put("bus", busAns);
         answers.put("spelling", spellingAns);
-        //answers.put("lunch", lunchAns);
+        answers.put("hit", hitAns);
+        answers.put("lunch", lunchAns);
 
         return answers;
     }

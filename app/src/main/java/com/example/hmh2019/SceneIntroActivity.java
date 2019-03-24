@@ -34,9 +34,13 @@ public class SceneIntroActivity extends AppCompatActivity {
 
         TextView scene1IntroText = findViewById(R.id.bus_intro_text);
         TextView scene2IntroText = findViewById(R.id.spelling_intro_text);
+        TextView scene3IntroText = findViewById(R.id.hit_intro_text);
+        TextView scene4IntroText = findViewById(R.id.lunch_intro_text);
 
         ImageButton scene1IntroBtn = findViewById(R.id.bus_intro_btn);
         ImageButton scene2IntroBtn = findViewById(R.id.spelling_intro_btn);
+        ImageButton scene3IntroBtn = findViewById(R.id.hit_intro_btn);
+        ImageButton scene4IntroBtn = findViewById(R.id.lunch_intro_btn);
 
         scene1IntroBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,11 +56,29 @@ public class SceneIntroActivity extends AppCompatActivity {
             }
         });
 
+        scene3IntroBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                forwardSceneChoiceActivity(3);
+            }
+        });
+
+        scene4IntroBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                forwardSceneChoiceActivity(4);
+            }
+        });
+
         scene1IntroText.setVisibility(View.INVISIBLE);
         scene2IntroText.setVisibility(View.INVISIBLE);
+        scene3IntroText.setVisibility(View.INVISIBLE);
+        scene4IntroText.setVisibility(View.INVISIBLE);
 
         scene1IntroBtn.setVisibility(View.INVISIBLE);
         scene2IntroBtn.setVisibility(View.INVISIBLE);
+        scene3IntroBtn.setVisibility(View.INVISIBLE);
+        scene4IntroBtn.setVisibility(View.INVISIBLE);
 
         switch(next){
             default:
@@ -68,12 +90,12 @@ public class SceneIntroActivity extends AppCompatActivity {
                 scene2IntroBtn.setVisibility(View.VISIBLE);
                 break;
             case("3"):
-                scene2IntroText.setVisibility(View.VISIBLE);
-                scene2IntroBtn.setVisibility(View.VISIBLE);
+                scene3IntroText.setVisibility(View.VISIBLE);
+                scene3IntroBtn.setVisibility(View.VISIBLE);
                 break;
             case("4"):
-                scene2IntroText.setVisibility(View.VISIBLE);
-                scene2IntroBtn.setVisibility(View.VISIBLE);
+                scene4IntroText.setVisibility(View.VISIBLE);
+                scene4IntroBtn.setVisibility(View.VISIBLE);
                 break;
         }
     }

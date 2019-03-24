@@ -65,6 +65,7 @@ public class Scene1Activity extends AppCompatActivity {
         SharedPreferences.Editor editor = getSharedPreferences(this.childName, MODE_PRIVATE).edit();
         editor.putString("bus", choice);
         editor.commit();
+        Log.i(this.getClass().getSimpleName(), "Stored bus choice: " + choice);
     }
 
     private void forwardToSceneIntro(){

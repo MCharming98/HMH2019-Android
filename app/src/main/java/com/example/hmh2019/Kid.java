@@ -25,6 +25,7 @@ public class Kid{
     String emotional_intelligence;
     String output_file;
     Boolean good; // When good is true, indicate no bad answers detected. So in the end, if good is true, the profile should be another sentence.
+    Boolean nullInput = false;
 
     public Kid(String input){
         name = input;
@@ -37,6 +38,10 @@ public class Kid{
     }
 
     public void doing_test_spelling_game(String input){
+        if(input == null){
+            reportNoData();
+            return;
+        }
         if (input.equals("c")){
             this.social_health += System.getProperty("line.separator"); //seperate the line
             String evaluation_social = "In the Spelling Game scenario," + this.name + "'s choice of c) I wait for a very long time until the teacher assigns me a partner may imply an experience of peer rejection, relational bullying.";
@@ -58,6 +63,10 @@ public class Kid{
 
     }
     public void doing_test_school_bus(String input){
+        if(input == null){
+            reportNoData();
+            return;
+        }
         if (input.equals("b")){
             this.social_health += System.getProperty("line.separator");
             String evaluation_social = "In the School Bus scenario," + this.name + "'s choice of b) I sit by myself silently along the way may imply an experience of peer rejection";
@@ -75,6 +84,10 @@ public class Kid{
         }
     }
     public void doing_test_hit(String input){
+        if(input == null){
+            reportNoData();
+            return;
+        }
         if (input.equals("b")){
             this.social_health += System.getProperty("line.separator");
             this.emotional_intelligence += System.getProperty("line.separator");
@@ -101,6 +114,10 @@ public class Kid{
         }
     }
     public void doing_test_snack(String input){
+        if(input == null){
+            reportNoData();
+            return;
+        }
         if (input.equals("c")){
             this.social_health += System.getProperty("line.separator"); //seperate the line
             String evaluation_social = "In the Snack Distribution scenario," + this.name + "'s choice of c) she doesn’t like me may imply an experience of hostile attribution bias.";
@@ -118,6 +135,10 @@ public class Kid{
         }
     }
     public void doing_test_lunch(String input){
+        if(input == null){
+            reportNoData();
+            return;
+        }
         if (input.equals("d") | input.equals("b")){
             this.emotional_intelligence += System.getProperty("line.separator");
             String evaluation_emotial_intelligence = "In the lunch scenario" + this.name + "'s choice may imply an experience of low empathy.";
@@ -126,6 +147,10 @@ public class Kid{
         }
     }
     public String finish(){
+        if(nullInput){
+            this.result = "No data obtained";
+            return this.result;
+        }
         if (this.good == true){
             this.result = "No problems detected, keep recording!";
             return this.result;
@@ -138,6 +163,10 @@ public class Kid{
             this.result += this.emotional_intelligence;
             return this.result;
         }
+    }
+
+    public void reportNoData(){
+        this.nullInput = true;
     }
 }
 /* How to store the output by name
