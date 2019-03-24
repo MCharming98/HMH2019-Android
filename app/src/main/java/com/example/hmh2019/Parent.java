@@ -13,6 +13,9 @@ public class Parent {
     public Parent(String[] kidsArray){
         kidArrayList = new ArrayList<String>(); //As a kid completes the test, it will be added to this arraylist
         for(String kid : kidsArray){kidArrayList.add(kid);}
+
+    public static Boolean exist_kid(kidArrayList){
+        return len(kidArrayList) != 0;
     }
 
     public static void kid_register(){}
@@ -22,7 +25,7 @@ public class Parent {
     }
 
     public static String display_kids_no(ArrayList<String> kidArrayList, Boolean exist_kid){
-        if (exist_kid) {
+        if (exist_kid(kidArrayList)) {
             return null;
         }
         else{
@@ -31,16 +34,18 @@ public class Parent {
         }
     } // return a string when there are no kids record in this device
 
-    public static ArrayList<String> display_kids_yes(ArrayList<String> kidArrayList, Boolean exist_kid) {
-        ArrayList<String> result = new ArrayList<String>();
+
+    public static ArraryList<String> display_kids_yes(ArrayList<String> kidArrayList, Boolean exist_kid) {
+        ArraryList<String> result = new ArrayList<String>()
         if (exist_kid) {
             for (String kid : kidArrayList) {
                 String profile_name;
                 profile_name = "the_profile_of_" + kid; //grammar check needed, checked, hopefully no grammar error
                 result.add(profile_name);
             }
+            return result
         }
-        return result;
+        return null
     }
 
 
