@@ -22,15 +22,10 @@ public class Parent {
     public Parent(){
         ArrayList<String> kidArrayList = new ArrayList<String>(); //As a kid completes the test, it will be added to this arraylist
     }
-    public static void kid_register
-    public static Boolean exist_kid(kidArrayList){
-        return len(kidArrayList) != 0
-    }
-    public static String display_kids_no(ArrayList<String> kidArrayList, Boolean exist_kid){
-        if exist_kid {
-            return null
 
-    public Boolean exist_kid(ArrayList kidArrayList){
+    public static void kid_register(){}
+
+    public static Boolean exist_kid(ArrayList<String> kidArrayList){
         return kidArrayList.size() != 0;
     }
 
@@ -39,32 +34,28 @@ public class Parent {
             return null;
         }
         else{
-            String result = "There is no report now please paly the game with your child!";
+            String result = "There is no report now please play the game with your child!";
             return result;
         }
     } // return a string when there are no kids record in this device
-    public static ArraryList<String> display_kids_yes(ArrayList<String> kidArrayList, Boolean exist_kid) {
-        ArraryList<String> result = new ArrayList<String>()
-        if (exist_kid){
-            for (String kid : kidArrayList) {
-                String profile_name;
-                profile_name = 'the_profile_of_' + kid; //grammar check needed, checked, hopefully no grammar error
-                result.add(report_name)
+
     public static ArrayList<String> display_kids_yes(ArrayList<String> kidArrayList, Boolean exist_kid) {
         ArrayList<String> result = new ArrayList<String>();
-        if(exist_kid){
-            for(Kid kid : kidArrayList){
-                String name = "the_profile_of_" + kid.name; //grammar check needed
-                result.add(name);
+        if (exist_kid) {
+            for (String kid : kidArrayList) {
+                String profile_name;
+                profile_name = "the_profile_of_" + kid; //grammar check needed, checked, hopefully no grammar error
+                result.add(profile_name);
             }
-            return result;
         }
-        return null;
+        return result;
     }
 
+
+    /*
     public static String read_file(Kid kid){
         String kid_name = kid.name;
-        String file_name = 'the_profile_of_' + kid_name;
+        String file_name = "the_profile_of_" + kid_name;
         try{
             FileInputStream fis = openFileInput(file_name, Context.MODE_PRIVATE);
             BufferedReader br = new BufferedReader(new InputStreamReader(new BufferedInputStream(fis)));
@@ -82,6 +73,7 @@ public class Parent {
         }
         return null;
     }//Not sure if it works, test cases needed.
+    */
 
     public static String display_result(String output){
         return output;

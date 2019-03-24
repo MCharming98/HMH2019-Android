@@ -27,15 +27,17 @@ public class Kid{
     }
 
     public void doing_test(String answer){
-        result += System.getProperty("line.separator") //seperate the line
-        result += answer //Update the result everytime when kid finishes one scenerio
+        result += System.getProperty("line.separator"); //seperate the line
+        result += answer; //Update the result everytime when kid finishes one scenerio
     }
 
+    /*
     public void store_output(String output_file, String result){
         FileOutputStream fos = openFileOutput(output_file, Context.MODE_PRIVATE);
         fos.write(result.getBytes());
         fos.close();
     }
+    */
 }
 /* How to store the output by name
 FileOutputStream fos = openFileOutput(FILENAME, Context.MODE_PRIVATE);
