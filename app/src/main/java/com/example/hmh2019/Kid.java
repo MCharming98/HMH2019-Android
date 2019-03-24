@@ -25,6 +25,9 @@ public class Kid{
     String emotional_intelligence;
     String output_file;
     Boolean good; // When good is true, indicate no bad answers detected. So in the end, if good is true, the profile should be another sentence.
+    Boolean emotional_good;
+    Boolean social_good;
+    Boolean emotional_intelligence_good;
 
     public Kid(String input){
         name = input;
@@ -34,24 +37,19 @@ public class Kid{
         emotional_health = "Emotional Health";
         emotional_intelligence = "Emotional Intelligence";
         good = true;
+        emotional_good = true;
+        social_good = true;
+        emotional_intelligence_good = true;
     }
-
-    public void doing_test(String answer){
-        result += System.getProperty("line.separator"); //seperate the line
-        result += answer; //Update the result everytime when kid finishes one scenerio
-        social_health = "Social Health";
-        emotional_health = "Emotional Health";
-        emotional_intelligence = "Emotional Intelligence";
-        good = true;
-    }
-
     public void doing_test_spelling_game(String input){
         if (input.equals("c")){
             this.social_health += System.getProperty("line.separator"); //seperate the line
             String evaluation_social = "In the Spelling Game scenario," + this.name + "'s choice of c) I wait for a very long time until the teacher assigns me a partner may imply an experience of peer rejection, relational bullying.";
             this.emotional_health += System.getProperty("line.separator"); //seperate the line
+            this.emotional_good = false;
             String evaluation_emotional = "In the Spelling Game scenario," + this.name + "'s choice of c) I wait for a very long time until the teacher assigns me a partner may imply an experience of loneliness.";
             this.social_health += evaluation_social;
+            this.social_good = false;
             this.emotional_health += evaluation_emotional;
             this.good = false;
         }
@@ -62,6 +60,8 @@ public class Kid{
             String evaluation_emotional = "In the Spelling Game scenario," + this.name + "'s choice of d) I prefer working by myself so leave me alone may imply an experience of loneliness.";
             this.social_health += evaluation_social;
             this.emotional_health += evaluation_emotional;
+            this.social_good = false;
+            this.emotional_good = false;
             this.good = false;
         }
 
@@ -71,6 +71,7 @@ public class Kid{
             this.social_health += System.getProperty("line.separator");
             String evaluation_social = "In the School Bus scenario," + this.name + "'s choice of b) I sit by myself silently along the way may imply an experience of peer rejection";
             this.social_health += evaluation_social;
+            this.social_good = false;
             this.good = false;
         }
         if (input.equals("d")){
@@ -80,6 +81,8 @@ public class Kid{
             String evaluation_emotional = "In the School Bus scenario," + this.name + "'s choice of d) I want to sit in a seat but I am rejected may imply an experience of loneliness.";
             this.social_health += evaluation_social;
             this.emotional_health += evaluation_emotional;
+            this.social_good = false;
+            this.emotional_good = false;
             this.good = false;
         }
     }
@@ -91,12 +94,15 @@ public class Kid{
             String evaluation_emotial_intelligence = "In the hit scenario," + this.name + "'s choice of b) I will find him and hit him in the back may imply a lack of emotional self-control";
             this.social_health += evaluation_social;
             this.emotional_intelligence += evaluation_emotial_intelligence;
+            this.social_good = false;
+            this.emotional_intelligence_good = false;
             this.good = false;
         }
         if (input.equals("c")){
             this.social_health += System.getProperty("line.separator");
             String evaluation_social = "In the hit scenario," + this.name + "'s choice of c) he does that intentionally may imply an experience of peer rejection and hostile attribution bias'";
             this.social_health += evaluation_social;
+            this.social_good = false;
             this.good = false;
         }
         if (input.equals("d")){
@@ -106,6 +112,8 @@ public class Kid{
             String evaluation_social = "In the hit scenario," + this.name + "'s choice of b)I hate him but I will just keep silent may imply an experience of peer rejection";
             this.social_health += evaluation_social;
             this.emotional_health += evaluation_emotional;
+            this.social_good = false;
+            this.emotional_good = false;
             this.good = false;
         }
     }
@@ -117,12 +125,15 @@ public class Kid{
             String evaluation_emotional = "In the snack Distribution scenario," + this.name + "'s choice of c) she doesn’t like me may imply an experience of low self-esteem.";
             this.social_health += evaluation_social;
             this.emotional_health += evaluation_emotional;
+            this.social_good = false;
+            this.emotional_good = false;
             this.good = false;
         }
         if (input.equals("d")){
             this.emotional_health += System.getProperty("line.separator");
             String evaluation_emotional = "n the snack Distribution scenario," + this.name + "'s choice of d) I did something wrong so she doesn’t want to give me that may imply an experience of low self-esteem.";
             this.emotional_health += evaluation_emotional;
+            this.emotional_good = false;
             this.good = false;
         }
     }
@@ -131,6 +142,7 @@ public class Kid{
             this.emotional_intelligence += System.getProperty("line.separator");
             String evaluation_emotial_intelligence = "In the lunch scenario" + this.name + "'s choice may imply an experience of low empathy.";
             this.emotional_intelligence += evaluation_emotial_intelligence;
+            this.emotional_intelligence_good = false;
             this.good = false;
         }
     }
@@ -140,9 +152,20 @@ public class Kid{
             return this.result;
         }
         else{
+            if(this.emotional_good == true){
+                this.emotional_health = "No problems detected in this section, keep recording!";
+            }
+            if(this.social_good == true){
+                this.social_health = "No problems detected in this section, keep recording!";
+            }
+            if(this.emotional_intelligence_good == true){
+                this.emotional_intelligence = "No problems detected in this section, keep recording!";
+            }
             this.result += this.social_health;
             this.result += System.getProperty("line.separator");
+            this.result += System.getProperty("line.separator");
             this.result += this.emotional_health;
+            this.result += System.getProperty("line.separator");
             this.result += System.getProperty("line.separator");
             this.result += this.emotional_intelligence;
             return this.result;
