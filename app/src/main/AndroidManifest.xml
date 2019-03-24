@@ -10,6 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".ParentsActivity"
+            android:label="@string/title_activity_parents"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".KidsActivity"
+            android:label="@string/title_activity_kids"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
