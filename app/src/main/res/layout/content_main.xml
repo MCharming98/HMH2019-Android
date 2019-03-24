@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="200dp"
-        android:text="For\n kids" />
+        android:text="For\n kids"/>
 
     <Button
         android:id="@+id/btn_parents"

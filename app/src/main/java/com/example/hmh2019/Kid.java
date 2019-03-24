@@ -9,8 +9,8 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 public class Kid{
-    string name; //The input string is the kid's name
-    public Kid(string input){
+    String name; //The input string is the kid's name
+    public Kid(String input){
         name = input;
     }
 }

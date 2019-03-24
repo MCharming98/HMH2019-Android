@@ -14,7 +14,7 @@ import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
-import Kid;
+import com.example.hmh2019.Kid;
 
 public class Parent {
     ArrayList<Kid> kidArrayList; //The initial list should be empty and we are adding kid to the arraylist when a kid complete his/her test
