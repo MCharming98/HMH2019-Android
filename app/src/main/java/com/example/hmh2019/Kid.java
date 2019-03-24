@@ -128,7 +128,9 @@ public class Kid{
         }
         else{
             kid.result += kid.social_health;
+            kid.result += System.getProperty("line.separator");
             kid.result += kid.emotional_health;
+            kid.result += System.getProperty("line.separator");
             kid.result += kid.emotional_intelligence;
         }
     }
