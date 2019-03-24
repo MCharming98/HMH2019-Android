@@ -33,12 +33,7 @@ public class Kid{
         emotional_intelligence = 'Emotional Intelligence';
         good = True;
     }
-
-    public void doing_test(String answer){
-        result += System.getProperty("line.separator") //seperate the line
-        result += answer //Update the result everytime when kid finishes one scenerio
-    }
-
+    
     public void doing_test_spelling_game(String input){
         if (input == 'c'){
             kid.social_health += System.getProperty("line.separator"); //seperate the line
