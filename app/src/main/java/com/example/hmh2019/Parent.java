@@ -18,26 +18,29 @@ import com.example.hmh2019.Kid;
 
 public class Parent {
     ArrayList<Kid> kidArrayList; //The initial list should be empty and we are adding kid to the arraylist when a kid complete his/her test
+
     public Parent(){
         ArrayList<Kid> kidArrayList = new ArrayList<Kid>();
     }
-    public Boolean exist_kid(kidArrayList){
-        return len(kidArrayList) != 0
+
+    public Boolean exist_kid(ArrayList kidArrayList){
+        return kidArrayList.size() != 0;
     }
+
     public static String display_kids_no(ArrayList<Kid> kidArrayList, Boolean exist_kid){
-        if exist_kid {
-            return null
+        if(exist_kid) {
+            return null;
         }
         else{
-            String result = 'There is no report now please paly the game with your child!';
+            String result = "There is no report now please paly the game with your child!";
             return result;
         }
     } // return a string when there are no kids record in this device
-    public static ArraryList<String> display_kids_no(ArrayList<Kid> kidArrayList, Boolean exist_kid) {
-        ArraryList<String> result = new ArrayList<String>()
-        if exist_kid{
-            for kid in kidArrayList {
-                name = 'the_profile_of_' + kid.name; //grammar check needed
+    public static ArrayList<String> display_kids_yes(ArrayList<Kid> kidArrayList, Boolean exist_kid) {
+        ArrayList<String> result = new ArrayList<String>();
+        if(exist_kid){
+            for(Kid kid : kidArrayList){
+                String name = "the_profile_of_" + kid.name; //grammar check needed
                 result.append(name)
             }
             return result
