@@ -16,6 +16,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
+/*
 public class Kid{
     String name; //The input string is the kid's name
     String result; //The result of our test is stored as string
@@ -24,6 +25,7 @@ public class Kid{
     String emotional_intelligence;
     String output_file;
     Boolean good;
+
     public Kid(String input){
         name = input;
         result = input; //The result starts with the name of our kid
@@ -31,32 +33,32 @@ public class Kid{
         social_health = 'Social Health';
         emotional_health = 'Emotional Health';
         emotional_intelligence = 'Emotional Intelligence';
-        good = True;
+        good = true;
     }
 
     public void doing_test(String answer){
-        result += System.getProperty("line.separator") //seperate the line
-        result += answer //Update the result everytime when kid finishes one scenerio
+        result += System.getProperty("line.separator"); //seperate the line
+        result += answer; //Update the result everytime when kid finishes one scenerio
     }
 
     public void doing_test_spelling_game(String input){
-        if (input == 'c'){
-            kid.social_health += System.getProperty("line.separator"); //seperate the line
-            String evaluation_social = 'In the Spelling Game scenario,' + kid.name + 's choice of c) I wait for a very long time until the teacher assigns me a partner may imply an experience of peer rejection, relational bullying.';
-            kid.emotional_health += System.getProperty("line.separator"); //seperate the line
-            String evaluation_emotional = 'In the Spelling Game scenario,' + kid.name + 's choice of c) I wait for a very long time until the teacher assigns me a partner may imply an experience of loneliness.';
-            kid.social_health += evaluation_social;
-            kid.emotional_health += evaluation_emotional;
-            kid.good = False;
+        if (input == "c"){
+            social_health += System.getProperty("line.separator"); //seperate the line
+            String evaluation_social = "In the Spelling Game scenario," + this.name + "'s choice of c) I wait for a very long time until the teacher assigns me a partner may imply an experience of peer rejection, relational bullying.";
+            emotional_health += System.getProperty("line.separator"); //seperate the line
+            String evaluation_emotional = "In the Spelling Game scenario," + this.name + "'s choice of c) I wait for a very long time until the teacher assigns me a partner may imply an experience of loneliness.";
+            social_health += evaluation_social;
+            emotional_health += evaluation_emotional;
+            good = false;
         }
-        if (input == 'd'){
-            kid.social_health += System.getProperty("line.separator"); //seperate the line
-            String evaluation_social = 'In the Spelling Game scenario,' + kid.name + 's choice of d) I prefer working by myself so leave me alone may imply an experience of peer rejection, relational bullying.';
-            kid.emotional_health += System.getProperty("line.separator"); //seperate the line
-            String evaluation_emotional = 'In the Spelling Game scenario,' + kid.name + 's choice of d) I prefer working by myself so leave me alone may imply an experience of loneliness.';
-            kid.social_health += evaluation_social;
-            kid.emotional_health += evaluation_emotional;
-            kid.good = False;
+        if (input == "d"){
+            social_health += System.getProperty("line.separator"); //seperate the line
+            String evaluation_social = "In the Spelling Game scenario," + this.name + "'s choice of d) I prefer working by myself so leave me alone may imply an experience of peer rejection, relational bullying.";
+            emotional_health += System.getProperty("line.separator"); //seperate the line
+            String evaluation_emotional = "In the Spelling Game scenario," + this.name + "'s choice of d) I prefer working by myself so leave me alone may imply an experience of loneliness.";
+            social_health += evaluation_social;
+            emotional_health += evaluation_emotional;
+            good = false;
         }
 
     }
@@ -140,14 +142,6 @@ public class Kid{
             kid.result += kid.emotional_intelligence;
         }
     }
-
-    /*
-    public void store_output(String output_file, String result){
-        FileOutputStream fos = openFileOutput(output_file, Context.MODE_PRIVATE);
-        fos.write(result.getBytes());
-        fos.close();
-    }
-    */
 }
 /* How to store the output by name
 FileOutputStream fos = openFileOutput(FILENAME, Context.MODE_PRIVATE);

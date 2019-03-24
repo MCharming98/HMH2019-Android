@@ -5,17 +5,17 @@ import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
-import com.example.hmh2019.Kid;
+//import com.example.hmh2019.Kid;
+
 
 public class Parent {
     private ArrayList<String> kidArrayList; //The initial list should be empty and we are adding kid to the arraylist when a kid complete his/her test
 
-    public Parent(String[] kidsArray){
+    public Parent(String[] kidsArray) {
         kidArrayList = new ArrayList<String>(); //As a kid completes the test, it will be added to this arraylist
-        for(String kid : kidsArray){kidArrayList.add(kid);}
-
-    public static Boolean exist_kid(kidArrayList){
-        return len(kidArrayList) != 0;
+        for (String kid : kidsArray) {
+            kidArrayList.add(kid);
+        }
     }
 
     public static void kid_register(){}
@@ -24,7 +24,8 @@ public class Parent {
         return this.kidArrayList.size() != 0;
     }
 
-    public static String display_kids_no(ArrayList<String> kidArrayList, Boolean exist_kid){
+    /*
+    public String display_kids_no(ArrayList<String> kidArrayList, Boolean exist_kid){
         if (exist_kid(kidArrayList)) {
             return null;
         }
@@ -47,6 +48,7 @@ public class Parent {
         }
         return null
     }
+    */
 
 
     /*
@@ -70,9 +72,10 @@ public class Parent {
         }
         return null;
     }//Not sure if it works, test cases needed.
-    */
+
 
     public static String display_result(String output){
         return output;
     }
+    */
 }

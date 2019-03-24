@@ -9,6 +9,8 @@ import android.view.View;
 
 public class Scene4Activity extends AppCompatActivity {
 
+    public static String childName = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -23,12 +23,15 @@ public class ChildProfileActivity extends AppCompatActivity {
         String childName = getIntent().getStringExtra(CHILD);
         Log.i(this.getClass().getSimpleName(), "Profile of " + childName);
 
+        getProfile(childName);
     }
 
 
-    private Map<String, String> getProfile(String childName){
+    private void getProfile(String childName){
         SharedPreferences prefs = getSharedPreferences(childName, MODE_PRIVATE);
-        //prefs.getInt();
-        return null;
+        String busAns = prefs.getString("bus", null);
+        String spellingAns = prefs.getString("spelling", null);
+        Log.i(this.getClass().getSimpleName(), "Answer for bus: " + busAns);
+        Log.i(this.getClass().getSimpleName(), "Answer for spelling: " + spellingAns);
     }
 }
