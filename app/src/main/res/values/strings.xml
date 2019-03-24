@@ -3,4 +3,6 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_kids">KidsActivity</string>
     <string name="title_activity_parents">ParentsActivity</string>
+    <string name="title_activity_child_profile">ChildProfileActivity</string>
+    <string name="title_activity_no_child">NoChildActivity</string>
 </resources>

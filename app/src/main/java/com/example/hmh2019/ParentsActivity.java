@@ -14,11 +14,13 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
+import java.util.Arrays;
 import java.util.Map;
 import java.util.Set;
 
 public class ParentsActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
+    private int check = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,12 @@ public class ParentsActivity extends AppCompatActivity implements AdapterView.On
         });
 
         String[] children = getChildren();
+        Parent parent = new Parent(children);
+
+        if(!parent.exist_kid()){
+            Intent no_child = new Intent(this, NoChildActivity.class);
+            startActivity(no_child);
+        }
 
         Spinner childrenSpinner = findViewById(R.id.children_spinner);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>
@@ -46,6 +54,7 @@ public class ParentsActivity extends AppCompatActivity implements AdapterView.On
         SharedPreferences prefs = getSharedPreferences("parent", MODE_PRIVATE);
         String[] template = new String[0];
         String[] children = prefs.getAll().keySet().toArray(template);
+        Arrays.sort(children);
         return children;
 
     }
@@ -57,10 +66,14 @@ public class ParentsActivity extends AppCompatActivity implements AdapterView.On
 
     public void onItemSelected(AdapterView<?> parent, View view,
                                int pos, long id) {
-        String child = parent.getItemAtPosition(pos).toString();
+        if(this.check > 0) {
+            String childName = parent.getItemAtPosition(pos).toString();
+            Intent profile = new Intent(this, ChildProfileActivity.class);
+            profile.putExtra(ChildProfileActivity.CHILD, childName);
+            startActivity(profile);
+        }
+        this.check++;
     }
 
-    public void onNothingSelected(AdapterView<?> parent) {
-        // Another interface callback
-    }
+    public void onNothingSelected(AdapterView<?> a){}
 }

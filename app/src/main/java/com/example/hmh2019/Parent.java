@@ -1,14 +1,5 @@
 package com.example.hmh2019;
 
-import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
-
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -17,16 +8,17 @@ import java.util.Set;
 import com.example.hmh2019.Kid;
 
 public class Parent {
-    ArrayList<String> kidArrayList; //The initial list should be empty and we are adding kid to the arraylist when a kid complete his/her test
+    private ArrayList<String> kidArrayList; //The initial list should be empty and we are adding kid to the arraylist when a kid complete his/her test
 
-    public Parent(){
-        ArrayList<String> kidArrayList = new ArrayList<String>(); //As a kid completes the test, it will be added to this arraylist
+    public Parent(String[] kidsArray){
+        kidArrayList = new ArrayList<String>(); //As a kid completes the test, it will be added to this arraylist
+        for(String kid : kidsArray){kidArrayList.add(kid);}
     }
 
     public static void kid_register(){}
 
-    public static Boolean exist_kid(ArrayList<String> kidArrayList){
-        return kidArrayList.size() != 0;
+    public Boolean exist_kid(){
+        return this.kidArrayList.size() != 0;
     }
 
     public static String display_kids_no(ArrayList<String> kidArrayList, Boolean exist_kid){

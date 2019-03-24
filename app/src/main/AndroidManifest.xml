@@ -10,9 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".NoChildActivity"
+            android:label="@string/title_activity_no_child"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".ChildProfileActivity"
+            android:label="@string/title_activity_child_profile"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".ParentsActivity"
             android:label="@string/title_activity_parents"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".KidsActivity"
             android:label="@string/title_activity_kids"
