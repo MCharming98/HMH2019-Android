@@ -147,19 +147,22 @@ public class Kid{
         }
     }
     public String finish(){
-        if (this.good == true){
+        if (this.good){
             this.result = "No problems detected, keep recording!";
             return this.result;
         }
         else{
-            if(this.emotional_good == true){
-                this.emotional_health = "No problems detected in this section, keep recording!";
+            if(this.emotional_good){
+                this.result += System.getProperty("line.separator");
+                this.emotional_health += "No problems detected in this section, keep recording!";
             }
-            if(this.social_good == true){
-                this.social_health = "No problems detected in this section, keep recording!";
+            if(this.social_good){
+                this.result += System.getProperty("line.separator");
+                this.social_health += "No problems detected in this section, keep recording!";
             }
-            if(this.emotional_intelligence_good == true){
-                this.emotional_intelligence = "No problems detected in this section, keep recording!";
+            if(this.emotional_intelligence_good){
+                this.result += System.getProperty("line.separator");
+                this.emotional_intelligence += "No problems detected in this section, keep recording!";
             }
             this.result += this.social_health;
             this.result += System.getProperty("line.separator");
