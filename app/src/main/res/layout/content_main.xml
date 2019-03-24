@@ -11,14 +11,14 @@
         android:id="@+id/btn_kids"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="150dp"
         android:text="For\n kids"/>
 
     <Button
         android:id="@+id/btn_parents"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="100dp"
         android:text="For\n parents"/>
 
 </LinearLayout>

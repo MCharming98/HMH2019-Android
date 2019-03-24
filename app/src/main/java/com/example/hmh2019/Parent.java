@@ -18,6 +18,7 @@ import com.example.hmh2019.Kid;
 
 public class Parent {
     ArrayList<String> kidArrayList; //The initial list should be empty and we are adding kid to the arraylist when a kid complete his/her test
+
     public Parent(){
         ArrayList<String> kidArrayList = new ArrayList<String>(); //As a kid completes the test, it will be added to this arraylist
     }
@@ -28,9 +29,17 @@ public class Parent {
     public static String display_kids_no(ArrayList<String> kidArrayList, Boolean exist_kid){
         if exist_kid {
             return null
+
+    public Boolean exist_kid(ArrayList kidArrayList){
+        return kidArrayList.size() != 0;
+    }
+
+    public static String display_kids_no(ArrayList<String> kidArrayList, Boolean exist_kid){
+        if(exist_kid) {
+            return null;
         }
         else{
-            String result = 'There is no report now please paly the game with your child!';
+            String result = "There is no report now please paly the game with your child!";
             return result;
         }
     } // return a string when there are no kids record in this device
@@ -41,30 +50,17 @@ public class Parent {
                 String profile_name;
                 profile_name = 'the_profile_of_' + kid; //grammar check needed, checked, hopefully no grammar error
                 result.add(report_name)
+    public static ArrayList<String> display_kids_yes(ArrayList<String> kidArrayList, Boolean exist_kid) {
+        ArrayList<String> result = new ArrayList<String>();
+        if(exist_kid){
+            for(String kid : kidArrayList){
+                String name = "the_profile_of_" + kid; //grammar check needed
+                result.append(name)
             }
             return result
         }
         return null
     }
-    public static String read_file(String kid){
-        String file_name = 'the_profile_of_' + kid;
-        try{
-            FileInputStream fis = openFileInput(file_name, Context.MODE_PRIVATE);
-            BufferedReader br = new BufferedReader(new InputStreamReader(new BufferedInputStream(fis)));
-            String line;
-            StringBuilder sb = new StringBuilder();
-            while ((line = br.readLine()) != null) {
-                sb.append(line);
-            }
-            br.close();
-            String output = sb.toString();
-            return output;
-        }
-        catch (IOException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }//Not sure if it works, test cases needed.
 
     public static String display_result(String output){
         return output;
