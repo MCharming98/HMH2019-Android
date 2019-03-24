@@ -35,7 +35,7 @@ public class KidsActivity extends AppCompatActivity {
                    SharedPreferences.Editor editor = getSharedPreferences("parent", MODE_PRIVATE).edit();
                    editor.putString(kidName, kidName);
                    editor.commit();
-                   //startGame(kidName);
+                   startGame(kidName);
                }
             }
         });
@@ -53,10 +53,10 @@ public class KidsActivity extends AppCompatActivity {
         startActivity(main);
     }
 
-    /*
+
     private void startGame(String name){
-        Intent game = new Intent(this, GameActivity.class);
-        game.putExtra("name", name);
+        Intent game = new Intent(this, SceneIntroActivity.class);
+        //game.putExtra("name", name);
+        startActivity(game);
     }
-    */
 }

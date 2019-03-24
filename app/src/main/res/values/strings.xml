@@ -5,4 +5,8 @@
     <string name="title_activity_parents">ParentsActivity</string>
     <string name="title_activity_child_profile">ChildProfileActivity</string>
     <string name="title_activity_no_child">NoChildActivity</string>
+    <string name="title_activity_scene_intro">SceneIntroActivity</string>
+    <string name="title_activity_scene1">Scene1Activity</string>
+    <string name="title_activity_scene3">Scene3Activity</string>
+    <string name="title_activity_scene4">Scene4Activity</string>
 </resources>

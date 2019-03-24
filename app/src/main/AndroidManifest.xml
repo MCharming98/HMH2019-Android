@@ -10,9 +10,29 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Scene4Activity"
+            android:label="@string/title_activity_scene4"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".Scene3Activity"
+            android:label="@string/title_activity_scene3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Scene2Activity"
+            android:label="@string/title_activity_scene1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Scene1Activity"
+            android:label="@string/title_activity_scene1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SceneIntroActivity"
+            android:label="@string/title_activity_scene_intro"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".NoChildActivity"
             android:label="@string/title_activity_no_child"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ChildProfileActivity"
             android:label="@string/title_activity_child_profile"
