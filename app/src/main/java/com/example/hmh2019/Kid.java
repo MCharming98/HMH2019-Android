@@ -125,9 +125,10 @@ public class Kid{
             this.good = false;
         }
     }
-    public void finish(){
+    public String finish(){
         if (this.good == true){
             this.result = "No problems detected, keep recording!";
+            return this.result;
         }
         else{
             this.result += this.social_health;
@@ -135,6 +136,7 @@ public class Kid{
             this.result += this.emotional_health;
             this.result += System.getProperty("line.separator");
             this.result += this.emotional_intelligence;
+            return this.result;
         }
     }
 }
