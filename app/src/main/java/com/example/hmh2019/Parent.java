@@ -1,11 +1,6 @@
 package com.example.hmh2019;
 
 import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Set;
-import com.example.hmh2019.Kid;
 
 public class Parent {
     private ArrayList<String> kidArrayList; //The initial list should be empty and we are adding kid to the arraylist when a kid complete his/her test
@@ -16,7 +11,6 @@ public class Parent {
             kidArrayList.add(kid);
         }
     }
-
 
     public Boolean exist_kid(){
         return this.kidArrayList.size() != 0;
