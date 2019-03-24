@@ -18,14 +18,10 @@ public class Parent {
         }
     }
 
-   /* public boolean exist_kid(kidArrayList){
-            return len(kidArrayList) != 0;
-    }*/
 
-    /* public Boolean exist_kid(){
+    public Boolean exist_kid(){
         return this.kidArrayList.size() != 0;
     }
-    */
 
     /*
     public String display_kids_no(ArrayList<String> kidArrayList, Boolean exist_kid){

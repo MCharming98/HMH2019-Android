@@ -8,7 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
-
+import java.util.HashMap;
 import java.util.Map;
 
 
@@ -23,15 +23,25 @@ public class ChildProfileActivity extends AppCompatActivity {
         String childName = getIntent().getStringExtra(CHILD);
         Log.i(this.getClass().getSimpleName(), "Profile of " + childName);
 
-        getProfile(childName);
+        Map<String, String> answers = getAnswer(childName);
+        Kid kid = new Kid(childName);
+        kid.doing_test_school_bus(answers.get("bus"));
+        kid.doing_test_spelling_game(answers.get("spelling"));
+        //kid.doing_test_lunch(answers.get("lunch"));
     }
 
 
-    private void getProfile(String childName){
+    private Map<String, String> getAnswer(String childName){
+        Map<String, String> answers = new HashMap<String, String>();
         SharedPreferences prefs = getSharedPreferences(childName, MODE_PRIVATE);
+
         String busAns = prefs.getString("bus", null);
         String spellingAns = prefs.getString("spelling", null);
-        Log.i(this.getClass().getSimpleName(), "Answer for bus: " + busAns);
-        Log.i(this.getClass().getSimpleName(), "Answer for spelling: " + spellingAns);
+        //String lunchAns = prefs.getString("lunch", null);
+        answers.put("bus", busAns);
+        answers.put("spelling", spellingAns);
+        //answers.put("lunch", lunchAns);
+
+        return answers;
     }
 }

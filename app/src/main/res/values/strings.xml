@@ -9,4 +9,5 @@
     <string name="title_activity_scene1">Scene1Activity</string>
     <string name="title_activity_scene3">Scene3Activity</string>
     <string name="title_activity_scene4">Scene4Activity</string>
+    <string name="title_activity_finish">FinishActivity</string>
 </resources>

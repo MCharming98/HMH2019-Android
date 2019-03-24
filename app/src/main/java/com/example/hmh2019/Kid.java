@@ -36,15 +36,6 @@ public class Kid{
         good = true;
     }
 
-    public void doing_test(String answer){
-        result += System.getProperty("line.separator"); //seperate the line
-        result += answer; //Update the result everytime when kid finishes one scenerio
-        social_health = "Social Health";
-        emotional_health = "Emotional Health";
-        emotional_intelligence = "Emotional Intelligence";
-        good = true;
-    }
-
     public void doing_test_spelling_game(String input){
         if (input.equals("c")){
             this.social_health += System.getProperty("line.separator"); //seperate the line
