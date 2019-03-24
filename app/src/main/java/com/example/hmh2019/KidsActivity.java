@@ -56,7 +56,7 @@ public class KidsActivity extends AppCompatActivity {
 
     private void startGame(String name){
         Intent game = new Intent(this, SceneIntroActivity.class);
-        //game.putExtra("name", name);
+        game.putExtra(SceneIntroActivity.childName, name);
         startActivity(game);
     }
 }
