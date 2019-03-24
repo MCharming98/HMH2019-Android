@@ -20,20 +20,11 @@ public class Parent {
     ArrayList<String> kidArrayList; //The initial list should be empty and we are adding kid to the arraylist when a kid complete his/her test
 
     public Parent(){
-        ArrayList<String> kidArrayList = new ArrayList<String>(); //As a kid completes the test, it will be added to this arraylist
+        kidArrayList = new ArrayList<String>(); //As a kid completes the test, it will be added to this arraylist
     }
-    public static void kid_register
     public static Boolean exist_kid(kidArrayList){
-        return len(kidArrayList) != 0
+        return len(kidArrayList) != 0;
     }
-    public static String display_kids_no(ArrayList<String> kidArrayList, Boolean exist_kid){
-        if exist_kid {
-            return null
-
-    public Boolean exist_kid(ArrayList kidArrayList){
-        return kidArrayList.size() != 0;
-    }
-
     public static String display_kids_no(ArrayList<String> kidArrayList, Boolean exist_kid){
         if (exist_kid(kidArrayList)) {
             return null;
@@ -48,11 +39,11 @@ public class Parent {
         if (exist_kid(kidArrayList)){
             for(String kid : kidArrayList){
                 String name = "the_profile_of_" + kid; //grammar check needed
-                result.append(name)
+                result.append(name);
             }
-            return result
+            return result;
         }
-        return null
+        return null;
     }
     public static String display_result(String output){
         return output;
