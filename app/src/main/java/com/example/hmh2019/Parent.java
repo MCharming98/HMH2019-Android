@@ -35,7 +35,7 @@ public class Parent {
     }
 
     public static String display_kids_no(ArrayList<String> kidArrayList, Boolean exist_kid){
-        if(exist_kid) {
+        if (exist_kid) {
             return null;
         }
         else{
@@ -45,14 +45,14 @@ public class Parent {
     } // return a string when there are no kids record in this device
     public static ArraryList<String> display_kids_yes(ArrayList<String> kidArrayList, Boolean exist_kid) {
         ArraryList<String> result = new ArrayList<String>()
-        if exist_kid{
+        if (exist_kid){
             for (String kid : kidArrayList) {
                 String profile_name;
                 profile_name = 'the_profile_of_' + kid; //grammar check needed, checked, hopefully no grammar error
                 result.add(report_name)
     public static ArrayList<String> display_kids_yes(ArrayList<String> kidArrayList, Boolean exist_kid) {
         ArrayList<String> result = new ArrayList<String>();
-        if(exist_kid){
+        if (exist_kid){
             for(String kid : kidArrayList){
                 String name = "the_profile_of_" + kid; //grammar check needed
                 result.append(name)
