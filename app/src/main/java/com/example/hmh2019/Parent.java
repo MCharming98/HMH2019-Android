@@ -17,18 +17,25 @@ import java.util.Set;
 import com.example.hmh2019.Kid;
 
 public class Parent {
-    ArrayList<Kid> kidArrayList; //The initial list should be empty and we are adding kid to the arraylist when a kid complete his/her test
+    ArrayList<String> kidArrayList; //The initial list should be empty and we are adding kid to the arraylist when a kid complete his/her test
 
     public Parent(){
-        ArrayList<Kid> kidArrayList = new ArrayList<Kid>();
+        ArrayList<String> kidArrayList = new ArrayList<String>(); //As a kid completes the test, it will be added to this arraylist
     }
+    public static void kid_register
+    public static Boolean exist_kid(kidArrayList){
+        return len(kidArrayList) != 0
+    }
+    public static String display_kids_no(ArrayList<String> kidArrayList, Boolean exist_kid){
+        if exist_kid {
+            return null
 
     public Boolean exist_kid(ArrayList kidArrayList){
         return kidArrayList.size() != 0;
     }
 
-    public static String display_kids_no(ArrayList<Kid> kidArrayList, Boolean exist_kid){
-        if(exist_kid) {
+    public static String display_kids_no(ArrayList<String> kidArrayList, Boolean exist_kid){
+        if (exist_kid) {
             return null;
         }
         else{
@@ -36,7 +43,14 @@ public class Parent {
             return result;
         }
     } // return a string when there are no kids record in this device
-    public static ArrayList<String> display_kids_yes(ArrayList<Kid> kidArrayList, Boolean exist_kid) {
+    public static ArraryList<String> display_kids_yes(ArrayList<String> kidArrayList, Boolean exist_kid) {
+        ArraryList<String> result = new ArrayList<String>()
+        if (exist_kid){
+            for (String kid : kidArrayList) {
+                String profile_name;
+                profile_name = 'the_profile_of_' + kid; //grammar check needed, checked, hopefully no grammar error
+                result.add(report_name)
+    public static ArrayList<String> display_kids_yes(ArrayList<String> kidArrayList, Boolean exist_kid) {
         ArrayList<String> result = new ArrayList<String>();
         if(exist_kid){
             for(Kid kid : kidArrayList){
@@ -48,7 +62,6 @@ public class Parent {
         return null;
     }
 
-    /*
     public static String read_file(Kid kid){
         String kid_name = kid.name;
         String file_name = 'the_profile_of_' + kid_name;
@@ -69,7 +82,6 @@ public class Parent {
         }
         return null;
     }//Not sure if it works, test cases needed.
-    */
 
     public static String display_result(String output){
         return output;
