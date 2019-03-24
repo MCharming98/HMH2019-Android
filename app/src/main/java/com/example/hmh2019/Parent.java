@@ -18,11 +18,14 @@ public class Parent {
         }
     }
 
-    public static void kid_register(){}
+   /* public boolean exist_kid(kidArrayList){
+            return len(kidArrayList) != 0;
+    }*/
 
-    public Boolean exist_kid(){
+    /* public Boolean exist_kid(){
         return this.kidArrayList.size() != 0;
     }
+    */
 
     /*
     public String display_kids_no(ArrayList<String> kidArrayList, Boolean exist_kid){
@@ -30,23 +33,37 @@ public class Parent {
             return null;
         }
         else{
+
+    public static String display_kids_no(ArrayList<String> kidArrayList, Boolean exist_kid){
+        if (exist_kid(kidArrayList)) {
+            return null;
+        }
+        else{
+
+    public static String display_kids_no(ArrayList<String> kidArrayList){
+        if (kidArrayList.size()== 0) {
             String result = "There is no report now please play the game with your child!";
             return result;
         }
-    } // return a string when there are no kids record in this device
+        else{
+            return null;
+        }
+    }// return a string when there are no kids record in this device
 
 
-    public static ArraryList<String> display_kids_yes(ArrayList<String> kidArrayList, Boolean exist_kid) {
-        ArraryList<String> result = new ArrayList<String>()
-        if (exist_kid) {
+    public static ArrayList<String> display_kids_yes(ArrayList<String> kidArrayList) {
+        ArrayList<String> result = new ArrayList<String>();
+        if (kidArrayList.size()== 0) {
+            return null;
+        }
+        else {
             for (String kid : kidArrayList) {
                 String profile_name;
                 profile_name = "the_profile_of_" + kid; //grammar check needed, checked, hopefully no grammar error
                 result.add(profile_name);
             }
-            return result
+            return result;
         }
-        return null
     }
     */
 
