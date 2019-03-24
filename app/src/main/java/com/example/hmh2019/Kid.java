@@ -32,7 +32,7 @@ public class Kid{
 
     public Kid(String input){
         name = input;
-        result = input; //The result starts with the name of our kid
+        result = input + "'s profile"; //The result starts with the name of our kid
         output_file = "the_profile_of_" + input; //The name of the output file should be the_profile_of_ben for exmaple, the name after _ is the input
         social_health = "Social Health";
         emotional_health = "Emotional Health";
@@ -178,14 +178,16 @@ public class Kid{
         }
         else{
             if(this.emotional_good == true){
-                this.emotional_health = "No problems detected in this section, keep recording!";
+                this.emotional_health = "No problems detected in emotional health, keep recording!";
             }
             if(this.social_good == true){
-                this.social_health = "No problems detected in this section, keep recording!";
+                this.social_health = "No problems detected in social health, keep recording!";
             }
             if(this.emotional_intelligence_good == true){
-                this.emotional_intelligence = "No problems detected in this section, keep recording!";
+                this.emotional_intelligence = "No problems detected in emotional intelligence, keep recording!";
             }
+            this.result += System.getProperty("line.separator");
+            this.result += System.getProperty("line.separator");
             this.result += this.social_health;
             this.result += System.getProperty("line.separator");
             this.result += System.getProperty("line.separator");
