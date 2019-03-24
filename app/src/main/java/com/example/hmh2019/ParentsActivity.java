@@ -37,7 +37,7 @@ public class ParentsActivity extends AppCompatActivity implements AdapterView.On
 
         Spinner childrenSpinner = findViewById(R.id.children_spinner);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>
-                (this, android.R.layout.simple_spinner_item, children);
+                (this, R.layout.spinner_item, children);
         childrenSpinner.setAdapter(adapter);
         childrenSpinner.setOnItemSelectedListener(this);
     }
