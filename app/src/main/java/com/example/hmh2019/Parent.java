@@ -6,6 +6,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 import com.example.hmh2019.Kid;
+//import com.example.hmh2019.Kid will cause compile error.
 
 public class Parent {
     private ArrayList<String> kidArrayList; //The initial list should be empty and we are adding kid to the arraylist when a kid complete his/her test
