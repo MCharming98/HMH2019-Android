@@ -23,13 +23,15 @@ public class Kid{
     public Kid(String input){
         name = input;
         result = input; //The result starts with the name of our kid
-        output_file = 'the_profile_of_' + input; //The name of the output file should be the_profile_of_ben for exmaple, the name after _ is the input
+        output_file = "the_profile_of_" + input; //The name of the output file should be the_profile_of_ben for exmaple, the name after _ is the input
     }
+    /*
     public void store_output(String output_file, String result){
         FileOutputStream fos = openFileOutput(output_file, Context.MODE_PRIVATE);
         fos.write(result.getBytes());
         fos.close();
     }
+    */
 }
 /* How to store the output by name
 FileOutputStream fos = openFileOutput(FILENAME, Context.MODE_PRIVATE);

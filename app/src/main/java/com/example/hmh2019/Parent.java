@@ -41,12 +41,14 @@ public class Parent {
         if(exist_kid){
             for(Kid kid : kidArrayList){
                 String name = "the_profile_of_" + kid.name; //grammar check needed
-                result.append(name)
+                result.add(name);
             }
-            return result
+            return result;
         }
-        return null
+        return null;
     }
+
+    /*
     public static String read_file(Kid kid){
         String kid_name = kid.name;
         String file_name = 'the_profile_of_' + kid_name;
@@ -67,6 +69,7 @@ public class Parent {
         }
         return null;
     }//Not sure if it works, test cases needed.
+    */
 
     public static String display_result(String output){
         return output;
