@@ -25,6 +25,10 @@ public class Kid{
         result = input; //The result starts with the name of our kid
         output_file = 'the_profile_of_' + input; //The name of the output file should be the_profile_of_ben for exmaple, the name after _ is the input
     }
+    public void doing_test(String answer){
+        result += System.getProperty("line.separator") //seperate the line
+        result += answer //Update the result everytime when kid finishes one scenerio
+    }
     public void store_output(String output_file, String result){
         FileOutputStream fos = openFileOutput(output_file, Context.MODE_PRIVATE);
         fos.write(result.getBytes());
@@ -35,3 +39,5 @@ public class Kid{
 FileOutputStream fos = openFileOutput(FILENAME, Context.MODE_PRIVATE);
 fos.write(string.getBytes());
 fos.close(); */
+// A line seperator
+// rhyme = line1 + System.getProperty("line.separator") + line2;
